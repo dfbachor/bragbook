@@ -46,6 +46,7 @@ class SystemsController extends Controller
 
          $system->save();
          //return($request['companyName']);
+         sleep(1);
 
          $system = System::where('id', '=', app('system')->id)->get()->first();
          return view('system.edit')->with('system', $system);

@@ -5,27 +5,25 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
+                    <div class="card-header" > 
+                        
+                            <div class="row">
+                                    <div class="col text-left">                                    
+                                            <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
+                                    </div>
+                                    <div class="col text-center">                                    
+                                        {{ __('Add User') }}
+                                    </div>
+                                    <div class="col text-right">
+                                    </div>
+                            </div>
+                    </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="companyName" class="col-md-4 col-form-label text-md-right">{{ __('Company Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="companyName" type="text" class="form-control{{ $errors->has('companyName') ? ' is-invalid' : '' }}" name="companyName" value="{{ old('companyName') }}" required autofocus>
-
-                                @if ($errors->has('companyName'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('companyName') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                         <div class="form-group row">
+                        <div class="form-group row"> 
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
@@ -51,6 +49,18 @@
                                     </span>
                                 @endif
                             </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('Company Logo') }}</label>
+
+                                <div class="col-sm-6">	
+                                    <input class="form-control" type="file" id="imageFileName" name="imageFileName"  placeholder="Image File Name">
+                                </div>
+                                <div class="col-sm-2">
+                                                                        
+                                </div>
                         </div>
 
                         <div class="form-group row">
