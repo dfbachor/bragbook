@@ -22,5 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/system', 'SystemsController@edit')->name('system.edit');
 Route::post('/system/update', 'SystemsController@update')->name('system.update');
 
+Route::get('/image/{filename}', 'APIController@getImage')->name('image');
 
-
+// Route::get('/image/{filename}', [
+//     'uses' => 'APIController@getImage', 
+//     'as' => 'image'
+// ]);

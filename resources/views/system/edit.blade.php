@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('system.update') }}">
+                    <form method="POST" action="{{ route('system.update') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -39,21 +39,22 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                                <label for="companyLogo" class="control-label col-sm-3">Company Logo:</label> 
-                                <div class="col-sm-6">	
-                                    <input class="form-control" type="file" id="companyLogo" name="companyLogo" placeholder="Image File Name">
-                                </div>
-                                <div class="col-sm-3">
+                        <div class="form-group row">
+                            <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('Company Logo') }}</label>
 
-                                    <!--@if($system->imageFileName == null || $system->imageFileName == "")
-                                        <img src="{{ route('image', ['filename' => app('system')->companyName) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
+                                <div class="col-sm-6">	
+                                    <input class="form-control" type="file" id="imageFileName" name="imageFileName" placeholder="Image File Name">
+                                </div>
+                                <div class="col-sm-2">
+
+                                    @if($system->imageFileName == null || $system->imageFileName == "")
+                                        <img src="{{ route('image', ['filename' => app('system')->imageFileName]) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
                                     @else
                                         <img src="{{ route('image', ['filename' => $system->imageFileName]) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
-                                    @endif-->
+                                    @endif
                                     
                                 </div>
-                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -62,6 +63,7 @@
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
