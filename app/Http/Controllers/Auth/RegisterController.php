@@ -68,7 +68,7 @@ class RegisterController extends Controller
         $system = new System();
         $system->companyName = $data['companyName'];
         $system->email = $data['email'];
-        $system->imageFileName = 'system_1_1_default.png';
+        $system->imageFileName = null;
         $system->save();
 
         $lastID = $system->id;

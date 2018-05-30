@@ -31,7 +31,8 @@ class SystemsController extends Controller
 
             if($file) {
                 $filename = 'system' . '_' . app('system')->id . '_' . app('system')->id  . '_' . $file->getClientOriginalName();
-                $stored = Storage::disk('local')->put($filename, File::get($file));
+
+                $stored = Storage::disk('public')->put($filename, File::get($file));
 
                 if($stored)
                     $system->imageFileName = $filename;

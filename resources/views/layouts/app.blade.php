@@ -38,6 +38,7 @@
                                 <li><a class="nav-link" href="/favorites">Favorites</a></li>
                                 <li><a class="nav-link" href="/categories">Categories</a></li>
                                 <li><a class="nav-link" href="/jobs">Jobs</a></li>
+                                <li><a class="nav-link" href="/users">Users</a></li>
                                 <li><a class="nav-link" href="/system">System</a></li>
                             @endif
                     </ul>

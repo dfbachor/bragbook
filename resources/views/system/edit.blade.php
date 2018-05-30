@@ -48,9 +48,10 @@
                                 <div class="col-sm-2">
 
                                     @if($system->imageFileName == null || $system->imageFileName == "")
-                                        <img src="{{ route('image', ['filename' => app('system')->imageFileName]) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
+                                        <img src="{{ asset('storage/' . app('defaultSystem')->imageFileName) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
                                     @else
-                                        <img src="{{ route('image', ['filename' => $system->imageFileName]) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
+                                    {{-- <img src="{{ route('image', ['filename' => $system->imageFileName]) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive"> --}}
+                                        <img src="{{ asset('storage/' . app('system')->imageFileName) }}" style="width: 35px; height: 35px" class="img-rounded imgPopup img-responsive">
                                     @endif
                                     
                                 </div>

@@ -30,7 +30,14 @@ class AppServiceProvider extends ServiceProvider
                 $system = \DB::table('systems')->find($user->systemID); // find the current system                  
             }
             return $system; // share the $system;
-        });    }
+        }); 
+
+        // return the defaultSystem with the id og 1
+        $this->app->singleton('defaultSystem', function() {
+            $system = \DB::table('systems')->find(1); // find the master system                   
+            return $system; // share the $system;
+        });
+    }
 
     /**
      * Register any application services.
