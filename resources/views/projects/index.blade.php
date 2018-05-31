@@ -7,17 +7,17 @@
             <div class="card">
                 <div class="card-header" > 
                         
-                        <div class="row">
-                                <div class="col text-left">                                    
-                                        <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
-                                </div>
-                                <div class="col text-center">                                    
-                                    {{ __('Jobs') }}
-                                </div>
-                                <div class="col text-right">
-                                    <a href='/jobs/create'><span class="fa fa-user-plus"></a>
-                                </div>
-                        </div>
+                    <div class="row">
+                            <div class="col text-left">                                    
+                                    <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
+                            </div>
+                            <div class="col text-center">                                    
+                                {{ __('Projects') }}
+                            </div>
+                            <div class="col text-right">
+                                <a href='/projects/create'><span class="fa fa-user-plus"></a>
+                            </div>
+                    </div>
                 </div>
 
                 <div class="card-body">
@@ -29,23 +29,23 @@
                                 <td></td>
                             </tr>
 
-                        @foreach($jobs as $job)
+                        @foreach($projects as $project)
                             <tr>
                                 <td>
-                                    @if($job['imageFileName'] == null || $job['imageFileName'] == "")
+                                    @if($project['imageFileName'] == null || $project['imageFileName'] == "")
                                         @if( app('system')->imageFileName == null || app('system')->imageFileName == "")
                                             <img src="{{ asset('storage/' . app('defaultSystem')->imageFileName) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                         @else    
                                             <img src="{{ asset('storage/' . app('system')->imageFileName) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                         @endif
                                     @else
-                                        <img src="{{ asset('storage/' . $job['imageFileName']) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
+                                        <img src="{{ asset('storage/' . $project['imageFileName']) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                     @endif
 
                                 </td>
-                                <td>{{ $job['name'] }}</td>
-                                <td>{{ $job['description'] }}</td>
-                                <td><a href='/jobs/edit/{{ $job['id'] }}'>Edit</a></td>
+                                <td>{{ $project['name'] }}</td>
+                                <td>{{ $project['description'] }}</td>
+                                <td><a href='/projects/edit/{{ $project['id'] }}'>Edit</a></td>
                             </tr>
                         @endforeach
                     </table>

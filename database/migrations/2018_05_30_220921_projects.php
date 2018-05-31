@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Jobs extends Migration
+class Projects extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Jobs extends Migration
      */
     public function up()
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('systemID');
             $table->string('name');
@@ -33,6 +33,6 @@ class Jobs extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jobs');
+        Schema::dropIfExists('projects');
     }
 }

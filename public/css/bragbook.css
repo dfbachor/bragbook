@@ -1,0 +1,17 @@
+
+
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+
+.bragbook-image-card-body-scrollable {
+    height:     1000px;
+    overflow-y: scroll;
+  }
+
+
+  .card-body p {
+    text-align: left;
+  }

@@ -29,17 +29,20 @@ Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
 Route::post('/users/update', 'UsersController@update')->name('users.update');
 Route::get('/users/destroy/{id}', 'UsersController@destroy');
 
-Route::get('/jobs', 'JobsController@index')->name('jobs');
-Route::get('/jobs/create', 'JobsController@create')->name('jobs.create');
-Route::post('/jobs/store', 'JobsController@store')->name('jobs.store');
-Route::get('/jobs/edit/{id}', 'JobsController@edit')->name('jobs.edit');
-Route::post('/jobs/update', 'JobsController@update')->name('jobs.update');
-Route::get('/jobs/destroy/{id}', 'JobsController@destroy');
+Route::get('/projects', 'ProjectsController@index')->name('projects');
+Route::get('/projects/create', 'ProjectsController@create')->name('projects.create');
+Route::post('/projects/store', 'ProjectsController@store')->name('projects.store');
+Route::get('/projects/edit/{id}', 'ProjectsController@edit')->name('projects.edit');
+Route::post('/projects/update', 'ProjectsController@update')->name('projects.update');
+Route::get('/projects/destroy/{id}', 'ProjectsController@destroy');
 
 Route::get('/categories', 'CategoriesController@index')->name('categories');
-// Route::get('/jobs/create', 'JobsController@create')->name('jobs.create');
-// Route::post('/jobs/store', 'JobsController@store')->name('jobs.store');
-// Route::get('/jobs/edit/{id}', 'JobsController@edit')->name('jobs.edit');
-// Route::post('/jobs/update', 'JobsController@update')->name('jobs.update');
-// Route::get('/jobs/destroy/{id}', 'JobsController@destroy');
+Route::get('/categories/create', 'CategoriesController@create')->name('categories.create');
+Route::post('/categories/store', 'CategoriesController@store')->name('categories.store');
+// Route::get('/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
+// Route::post('/categories/update', 'CategoriesController@update')->name('categories.update');
+// Route::get('/categories/destroy/{id}', 'CategoriesController@destroy');
 
+Route::get('/images', 'ImagesController@index')->name('images');
+Route::get('/images/create', 'ImagesController@create')->name('images.create');
+Route::post('/images/store', 'ImagesController@store')->name('images.store');

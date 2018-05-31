@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Image extends Model
 {
     protected $fillable = [
-        'systemID', 'name',
+        'systemID', 'title', 'categoryID', 'projectID', 'imageFileName',
     ];
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class JobsTableSeeder extends Seeder
+class ProjectsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class JobsTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('jobs')->insert([
+        \DB::table('projects')->insert([
             'systemID' => 2,
             'name' => 'City Hall',
             'description' => 'Painting project - halls and offices',

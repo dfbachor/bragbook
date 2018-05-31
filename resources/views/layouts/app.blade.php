@@ -20,10 +20,12 @@
     
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bragbook.css') }}" rel="stylesheet">
+    @yield('styles') 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ app('system')->companyName }}
@@ -35,13 +37,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                            @if(Auth::check())
-                                <li><a class="nav-link" href="/favorites">Favorites</a></li>
-                                <li><a class="nav-link" href="/categories">Categories</a></li>
-                                <li><a class="nav-link" href="/jobs">Jobs</a></li>
-                                <li><a class="nav-link" href="/users">Users</a></li>
-                                <li><a class="nav-link" href="/system">System</a></li>
-                            @endif
+                        @if(Auth::check())
+                            <li><a class="nav-link" href="/images">All Images</a></li>
+                            <li><a class="nav-link" href="/favorites">Favorites</a></li>
+                            <li><a class="nav-link" href="/categories">Categories</a></li>
+                            <li><a class="nav-link" href="/projects">Projects</a></li>
+                            <li><a class="nav-link" href="/users">Users</a></li>
+                            <li><a class="nav-link" href="/system">System</a></li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

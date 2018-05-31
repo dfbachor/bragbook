@@ -1,9 +1,55 @@
 @extends('layouts.app')
 
+
+@section('styles')
+    <style> 
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
+    </style>
+@endsection
+
+
+@section('styles')
+    <style> 
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        
+        div.scrollmenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" > 
                         
@@ -21,19 +67,14 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table" border='1'>
-                            <tr>
-                                <td>Category</td>
-                                <td></td>
-                            </tr>
+                        <div class="scrollmenu">
 
-                        @foreach($categories as $category)
-                            <tr>
-                                <td>{{ $category['name'] }}</td>
-                                <td><a href='/categories/edit/{{ $category['id'] }}'>Edit</a></td>
-                            </tr>
-                        @endforeach
-                    </table>
+                                @foreach($categories as $category)
+                        
+                                    <a href="#{{$category['id']}}">{{$category['name']}}</a>
+                        
+                                @endforeach    
+                            </div>
                        
                 </div>
 
