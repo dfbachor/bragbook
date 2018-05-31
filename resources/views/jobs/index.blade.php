@@ -12,10 +12,10 @@
                                         <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
                                 </div>
                                 <div class="col text-center">                                    
-                                    {{ __('Users') }}
+                                    {{ __('Jobs') }}
                                 </div>
                                 <div class="col text-right">
-                                    <a href='/users/create'><span class="fa fa-user-plus"></a>
+                                    <a href='/jobs/create'><span class="fa fa-user-plus"></a>
                                 </div>
                         </div>
                 </div>
@@ -25,27 +25,27 @@
                             <tr>
                                 <td>Picture</td>
                                 <td>Name</td>
-                                <td>email</td>
+                                <td>Description</td>
                                 <td></td>
                             </tr>
 
-                        @foreach($users as $user)
+                        @foreach($jobs as $job)
                             <tr>
                                 <td>
-                                    @if($user['imageFileName'] == null || $user['imageFileName'] == "")
+                                    @if($job['imageFileName'] == null || $job['imageFileName'] == "")
                                         @if( app('system')->imageFileName == null || app('system')->imageFileName == "")
                                             <img src="{{ asset('storage/' . app('defaultSystem')->imageFileName) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                         @else    
                                             <img src="{{ asset('storage/' . app('system')->imageFileName) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                         @endif
                                     @else
-                                        <img src="{{ asset('storage/' . $user['imageFileName']) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
+                                        <img src="{{ asset('storage/' . $job['imageFileName']) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
                                     @endif
 
                                 </td>
-                                <td>{{ $user['name'] }}</td>
-                                <td>{{ $user['email'] }}</td>
-                                <td><a href='/users/edit/{{ $user['id'] }}'>Edit</a></td>
+                                <td>{{ $job['name'] }}</td>
+                                <td>{{ $job['description'] }}</td>
+                                <td><a href='/jobs/edit/{{ $job['id'] }}'>Edit</a></td>
                             </tr>
                         @endforeach
                     </table>

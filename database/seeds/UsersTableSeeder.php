@@ -12,12 +12,20 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \DB::table('users')->insert([
-            'name' => 'Dave B', 
             'systemID' => 1,
-            'name' => 'daveb',
+            'name' => 'Dave B',
             'email' => 'dave@dfbiii.com',
             'password' => bcrypt('davedave'),
             'imageFileName' => null,
         ]);
+
+        \DB::table('users')->insert([
+            'systemID' => 2,
+            'name' => 'Seed',
+            'email' => 'seed@seed.com',
+            'password' => bcrypt('seedseed'),
+            'imageFileName' => null,
+        ]);
+
     }
 }

@@ -5,19 +5,20 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                    <div class="card-header" > 
-                        
-                            <div class="row">
-                                    <div class="col text-left">                                    
-                                            <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
-                                    </div>
-                                    <div class="col text-center">                                    
-                                        {{ __('Add User') }}
-                                    </div>
-                                    <div class="col text-right">
-                                    </div>
-                            </div>
-                    </div>
+                <div class="card-header" > 
+                    
+                        <div class="row">
+                                <div class="col text-left">                                    
+                                        <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
+                                </div>
+                                <div class="col text-center">                                    
+                                    {{ __('Add User') }}
+                                </div>
+                                <div class="col text-right">
+                                </div>
+                        </div>
+                </div>
+        
                 <div class="card-body">
                     <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data">
                         @csrf

@@ -29,10 +29,10 @@ Route::get('/users/edit/{id}', 'UsersController@edit')->name('users.edit');
 Route::post('/users/update', 'UsersController@update')->name('users.update');
 Route::get('/users/destroy/{id}', 'UsersController@destroy');
 
+Route::get('/jobs', 'JobsController@index')->name('jobs');
+Route::get('/jobs/create', 'JobsController@create')->name('jobs.create');
+Route::post('/jobs/store', 'JobsController@store')->name('jobs.store');
+Route::get('/jobs/edit/{id}', 'JobsController@edit')->name('jobs.edit');
+Route::post('/jobs/update', 'JobsController@update')->name('jobs.update');
+Route::get('/jobs/destroy/{id}', 'JobsController@destroy');
 
-// Route::get('/image/{filename}', 'APIController@getImage')->name('image');
-
-// // Route::get('/image/{filename}', [
-// //     'uses' => 'APIController@getImage', 
-// //     'as' => 'image'
-// // ])
