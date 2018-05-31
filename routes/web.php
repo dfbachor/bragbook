@@ -36,3 +36,10 @@ Route::get('/jobs/edit/{id}', 'JobsController@edit')->name('jobs.edit');
 Route::post('/jobs/update', 'JobsController@update')->name('jobs.update');
 Route::get('/jobs/destroy/{id}', 'JobsController@destroy');
 
+Route::get('/categories', 'CategoriesController@index')->name('categories');
+// Route::get('/jobs/create', 'JobsController@create')->name('jobs.create');
+// Route::post('/jobs/store', 'JobsController@store')->name('jobs.store');
+// Route::get('/jobs/edit/{id}', 'JobsController@edit')->name('jobs.edit');
+// Route::post('/jobs/update', 'JobsController@update')->name('jobs.update');
+// Route::get('/jobs/destroy/{id}', 'JobsController@destroy');
+
