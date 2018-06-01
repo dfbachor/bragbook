@@ -5,6 +5,24 @@ body {
     padding-top: 4.5rem;
 }
 
+/* .bragImage {
+  position: relative;
+  float: left;
+  width:  100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  
+} */
+
+/* .bragImage {
+    max-height: 20vw;
+    min-height: 20vw;
+    max-width: 20vw;
+    min-width: 20vw;
+} */
+
 
 .bragbook-image-card-body-scrollable {
     height:     1000px;

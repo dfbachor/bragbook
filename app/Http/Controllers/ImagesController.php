@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\Project;
+use App\Category;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -16,8 +18,16 @@ class ImagesController extends Controller
      */
     public function index() 
     {
-        $images = Image::where('systemID', app('system')->id)->orderBy('created_at', 'DESC')->get();
-        return view('images.index', compact('images'));
+        $images = Image::join('categories', 'images.categoryID', 'categories.id')
+                    ->join('projects', 'images.projectID', 'projects.id')
+                    ->select('images.id', 'images.imageFileName', 'images.title', 'images.created_at', 'categories.name as categoryName', 'projects.name as projectName')
+                    ->where('images.systemID', app('system')->id)->orderBy('images.created_at', 'DESC')->get();
+
+        //$categories = Category::where('systemID', app('system')->id)->get();
+
+        return view('images.index')
+            ->with(compact('images')) 
+            ->with(compact('categories')); 
     }
 
      /**
@@ -27,7 +37,14 @@ class ImagesController extends Controller
     public function create() 
     {
 
-        return view('images.create');
+        $categories = Category::where('systemID', app('system')->id)->get(['id', 'name']);
+        $projects = Project::where('systemID', app('system')->id)->get(['id', 'name']);
+
+
+        return view('images.create')
+                ->with(compact('categories', $categories)) 
+                ->with(compact('projects', $projects)) 
+        ;
     }
 
     /**

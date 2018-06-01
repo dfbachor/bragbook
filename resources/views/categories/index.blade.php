@@ -24,27 +24,7 @@
 @endsection
 
 
-@section('styles')
-    <style> 
-        div.scrollmenu {
-            background-color: #333;
-            overflow: auto;
-            white-space: nowrap;
-        }
-        
-        div.scrollmenu a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
-        }
-        
-        div.scrollmenu a:hover {
-            background-color: #777;
-        }
-    </style>
-@endsection
+
 
 @section('content')
 <div class="container">

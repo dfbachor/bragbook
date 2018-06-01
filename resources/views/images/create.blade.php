@@ -38,30 +38,29 @@
                         </div>
 
                         <div class="form-group row"> 
-                            <label for="categoryID" class="col-md-4 col-form-label text-md-right">{{ __('categoryID') }}</label required>
+                            <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label required>
 
                             <div class="col-md-6">
-                                <input id="categoryID" type="text" class="form-control{{ $errors->has('categoryID') ? ' is-invalid' : '' }}" name="categoryID" value="{{ old('categoryID') }}">
-
-                                @if ($errors->has('categoryID'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('categoryID') }}</strong>
-                                    </span>
-                                @endif
+                                <select class="form-control" name="categoryID" id="category" required>
+                                    <option value="">Select Category</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
+
                         <div class="form-group row"> 
-                            <label for="projectID" class="col-md-4 col-form-label text-md-right">{{ __('projectID') }}</label>
+                                <label for="project" class="col-md-4 col-form-label text-md-right">{{ __('Project') }}</label required>
 
-                            <div class="col-md-6">
-                                <input id="projectID" type="text" class="form-control{{ $errors->has('projectID') ? ' is-invalid' : '' }}" name="projectID" value="{{ old('projectID') }}">
-
-                                @if ($errors->has('projectID'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('projectID') }}</strong>
-                                    </span>
-                                @endif
+                                    <div class="col-md-6">
+                                            <select class="form-control" name="projectID" id="project">
+                                        <option value="">Select Project</option>
+                                        @foreach($projects as $project)
+                                            <option value="{{$project->id}}">{{$project->name}}</option>
+                                        @endforeach
+                                    </select>
                             </div>
                         </div>
 

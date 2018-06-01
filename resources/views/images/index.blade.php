@@ -40,12 +40,14 @@
                                                     <h6><a href="#">{{$image->title}}</a></h6>
                                                 </div>
                                             
-                                            <a class="lightbox" href="{{ asset('storage/' . $image['imageFileName']) }}">
+                                            <a class="lightbox bragImage" href="{{ asset('storage/' . $image['imageFileName']) }}">
                                                 <img src="{{ asset('storage/' . $image['imageFileName']) }}" alt="Card Image" class="card-img-top">
                                             </a>
                                             
                                             <div class="card-body">
                                                 <h6><a href="#">{{$image->title}}</a></h6>
+                                                <p class="text-muted card-text">Category: <small>{{$image->categoryName}}</small></p>
+                                                <p class="text-muted card-text">Project: <small>{{$image->projectName}}</small></p>
                                                 <p class="text-muted card-text">Creation Date: <small>{{$image->created_at->format('m/d/Y')}}</small></p>
                                             </div>
                                         </div>
