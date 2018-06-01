@@ -26,8 +26,8 @@ class ImagesController extends Controller
         //$categories = Category::where('systemID', app('system')->id)->get();
 
         return view('images.index')
-            ->with(compact('images')) 
-            ->with(compact('categories')); 
+            ->with(compact('images')); 
+            //->with(compact('categories')); 
     }
 
      /**
