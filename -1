@@ -226,3 +226,93 @@ W: Creating socket for 'localhost:9000', poll success, but error: Operation now 
 E: Could not connect to client. :-(
 Log closed at 2018-05-29 22:08:09
 
+Log opened at 2018-06-07 15:40:53
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:40:53
+
+Log opened at 2018-06-07 15:43:37
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:43:37
+
+Log opened at 2018-06-07 15:44:00
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:44:00
+
+Log opened at 2018-06-07 15:46:36
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:46:36
+
+Log opened at 2018-06-07 15:46:42
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:46:42
+
+Log opened at 2018-06-07 15:49:39
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:49:39
+
+Log opened at 2018-06-07 15:50:53
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:50:53
+
+Log opened at 2018-06-07 15:50:54
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:50:54
+
+Log opened at 2018-06-07 15:50:57
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:50:57
+
+Log opened at 2018-06-07 15:55:24
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:24
+
+Log opened at 2018-06-07 15:55:24
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:24
+
+Log opened at 2018-06-07 15:55:25
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:25
+
+Log opened at 2018-06-07 15:55:31
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:31
+
+Log opened at 2018-06-07 15:55:39
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:39
+
+Log opened at 2018-06-07 15:55:47
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-07 15:55:47
+
