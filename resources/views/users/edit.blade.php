@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="form-group row">
-                                <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('Company Logo') }}</label>
+                                <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('User Image') }}</label>
     
                                     <div class="col-sm-6">	
                                         <input class="form-control" type="file" id="imageFileName" name="imageFileName" placeholder="Image File Name">

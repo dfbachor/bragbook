@@ -8,115 +8,86 @@
                 <div class="card-header" > 
                     
                     <div class="row">
-                            <div class="col text-left">                                    
-                                    <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
-                            </div>
-                            <div class="col text-center">                                    
-                                {{ __('Add job') }}
-                            </div>
-                            <div class="col text-right">
-                                <a class='delete' href='/jobs/destroy/{{$job->id}}'>delete</a>
-                            </div>
+                        <div class="col text-left">                                    
+                            <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
+                        </div>
+                        <div class="col text-center">                                    
+                            {{ __('Edit Image') }}
+                        </div>
+                        <div class="col text-right">
+                        </div>
                     </div>
                 </div>
-
+        
                 <div class="card-body">
-                    <form method="POST" action="/jobs/update" enctype="multipart/form-data">
-                        {{ csrf_field() }}
-
-                        <input value='{{ $job->id }}' type="hidden" id="id" name="id"> 					    
+                    <form method="POST" action="{{ route('images.update') }}" enctype="multipart/form-data">
+                        @csrf
 
                         <div class="form-group row"> 
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $job->name }}" required>
+                                <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ $image.title }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('title'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('title') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row"> 
-                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
+                            <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label required>
 
                             <div class="col-md-6">
-                                <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ $job->description }}" >
+                                <select class="form-control" name="categoryID" id="category" required>
+                                    <option value="">Select Category</option>
+                                    @foreach($categories as $category)
 
-                                @if ($errors->has('description'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('description') }}</strong>
-                                    </span>
-                                @endif
+                                        @if($image->categoryID == $category->ID)
+                                            <option value="{{$category->id}}" selected>{{$category->name}}</option>
+                                        @else
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
-                        <div class="form-group row"> 
-                            <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="location" type="text" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location" value="{{ $job->location }}" >
-
-                                @if ($errors->has('location'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('location') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
                         <div class="form-group row"> 
-                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+                                <label for="project" class="col-md-4 col-form-label text-md-right">{{ __('Project') }}</label required>
 
-                            <div class="col-md-6">
-                                <input id="city" type="text" class="form-control{{ $errors->has('city') ? ' is-invalid' : '' }}" name="city" value="{{ $job->city }}" >
-
-                                @if ($errors->has('city'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row"> 
-                            <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('State') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="state" type="text" class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" name="state" value="{{ $job->state }}" >
-
-                                @if ($errors->has('state'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('state') }}</strong>
-                                    </span>
-                                @endif
+                                <div class="col-md-6">
+                                    <select class="form-control" name="projectID" id="project">
+                                        <option value="">Select Project</option>
+                                        @foreach($projects as $project)
+                                            @if($image->projectID == $project->ID)
+                                                <option value="{{$project->id}}" selected>{{$project->name}}</option>
+                                            @else
+                                                <option value="{{$project->id}}">{{$project->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                                <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('Job Image') }}</label>
-    
-                                    <div class="col-sm-6">	
-                                        <input class="form-control" type="file" id="imageFileName" name="imageFileName" placeholder="Image File Name">
-                                    </div>
-                                    <div class="col-sm-2">
-    
-                                        @if($job['imageFileName'] == null || $job['imageFileName'] == "")
-                                            <img src="{{ asset('storage/' . app('defaultSystem')->imageFileName) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
-                                        @else
-                                            <img src="{{ asset('storage/' . $job['imageFileName']) }}" style="width: 35px; height: 35px" class="rounded imgPopup">
-                                        @endif
-                                        
-                                    </div>
-                            </div>
+                            <label for="imageFileName" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                                <div class="col-sm-6">	
+                                    <input class="form-control" type="file" id="imageFileName" name="imageFileName"  placeholder="Image File Name">
+                                </div>
+                                <div class="col-sm-2">
+                                                                        
+                                </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Edit
+                                    {{ __('Edit') }}
                                 </button>
                             </div>
                         </div>
@@ -127,4 +98,3 @@
     </div>
 </div>
 @endsection
- 

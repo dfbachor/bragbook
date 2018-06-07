@@ -8,14 +8,14 @@
                 <div class="card-header" > 
                     
                     <div class="row">
-                            <div class="col text-left">                                    
-                                    <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
-                            </div>
-                            <div class="col text-center">                                    
-                                {{ __('Add Image') }}
-                            </div>
-                            <div class="col text-right">
-                            </div>
+                        <div class="col text-left">                                    
+                            <a href="{{url()->previous()}}"><span class="fa fa-caret-square-o-left"></a>
+                        </div>
+                        <div class="col text-center">                                    
+                            {{ __('Add Image') }}
+                        </div>
+                        <div class="col text-right">
+                        </div>
                     </div>
                 </div>
         
