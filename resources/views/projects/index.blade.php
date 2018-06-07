@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" > 
                         
@@ -15,7 +15,7 @@
                                 {{ __('Projects') }}
                             </div>
                             <div class="col text-right">
-                                <a href='/projects/create'><span class="fa fa-user-plus"></a>
+                                <a href='/projects/create'><span class="fa fa-plus-square-o"></a>
                             </div>
                     </div>
                 </div>
