@@ -40,7 +40,7 @@
                         @if(Auth::check())
                             <li><a class="nav-link" href="/images">All Images</a></li>
                             <li><a class="nav-link" href="/favorites">Favorites</a></li>
-                            <li><a class="nav-link" href="/categories">Categories</a></li>
+                            <li><a class="nav-link" href="/categories/0">Categories</a></li>
                             <li><a class="nav-link" href="/projects">Projects</a></li>
                             <li><a class="nav-link" href="/users">Users</a></li>
                             <li><a class="nav-link" href="/system">System</a></li>

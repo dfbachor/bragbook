@@ -346,3 +346,15 @@ W: Creating socket for 'localhost:9000', poll success, but error: Operation now 
 E: Could not connect to client. :-(
 Log closed at 2018-06-07 16:08:29
 
+Log opened at 2018-06-08 19:41:39
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-08 19:41:39
+
+Log opened at 2018-06-08 19:46:42
+I: Connecting to configured address/port: localhost:9000.
+W: Creating socket for 'localhost:9000', poll success, but error: Operation now in progress (29).
+E: Could not connect to client. :-(
+Log closed at 2018-06-08 19:46:42
+

@@ -36,7 +36,7 @@ Route::get('/projects/edit/{id}', 'ProjectsController@edit')->name('projects.edi
 Route::post('/projects/update', 'ProjectsController@update')->name('projects.update');
 Route::get('/projects/destroy/{id}', 'ProjectsController@destroy');
 
-Route::get('/categories', 'CategoriesController@index')->name('categories');
+Route::get('/categories/{id}', 'CategoriesController@index')->name('categories');
 Route::get('/categories/create', 'CategoriesController@create')->name('categories.create');
 Route::post('/categories/store', 'CategoriesController@store')->name('categories.store');
 // Route::get('/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
