@@ -20,6 +20,10 @@
         div.scrollmenu a:hover {
             background-color: #777;
         }
+
+        div.scrollmenu a.selected {
+            background-color: #777;            
+        }
     </style>
 @endsection
 
@@ -50,9 +54,11 @@
                     <div class="scrollmenu">
 
                         @foreach($categories as $category)
-                
-                            <a href="/categories/{{$category['id']}}">{{$category['name']}}</a>
-                
+                            @if($category['id'] == $currentCategoryID)
+                                <a class='selected' href="/categories/{{$category['id']}}">{{$category['name']}}</a>
+                            @else
+                                <a href="/categories/{{$category['id']}}">{{$category['name']}}</a>
+                            @endif
                         @endforeach    
                     </div>
                 </div>

@@ -21,7 +21,7 @@ class CategoriesController extends Controller
                                         ->get()
                                         ->first();
             $currentCategoryID = $currentCategory->id;
-            $currentCategoryName = $currentCategory->Name;
+            $currentCategoryName = $currentCategory->name;
         } else {
             $currentCategoryID = 0;
             $currentCategoryName = "Select Category";
